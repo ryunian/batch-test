@@ -1,0 +1,9 @@
+spring:
+  batch.job.names: conditionalStepFlowJob # 어플리케이션 시동 시, Job 시작 해제
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;MODE=MYSQL;
+    schema: classpath:/org/springframework/batch/core/schema-h2.sql
+    initialization-mode: never
+
+logging.level.com.shoon.batch: debug
